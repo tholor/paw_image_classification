@@ -6,6 +6,7 @@ Code of my PAW 2017 conference talk. Retraining the Inception v3 Architecture fo
 2. Use my keras fork (or just copy the file keras/preprocessing/image.py) to allow for passing a dictionary with the "multilabels" to the keras ImageDataGenerator: https://github.com/tholor/keras/tree/multilabel-image-generator
 2. Create this dictionary containing the multilabels, with key = image_path and value = numpy array of dummy encoded labels and pickle it as "data/meta/all_y_labels.p"
 Example: 
+```
 {'vegetables/vegetables_854.jpg': array([ 1.,  1.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  1.,  0.,  0.,  0.,
          0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
          0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
@@ -19,9 +20,10 @@ Example:
          0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,
          0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.,  0.]), 
 ...} 
-
+```
 
 4. Create a dictionary for translation between object name and integer. Pickle it as "data/meta/classes_dict.p"
+```
 Example:
 {'airplane': 35,
  'baby': 63,
@@ -38,5 +40,6 @@ Example:
  'chair': 4,
  'city': 8,
 ...}
+```
 5. Start the jupyter notebook, adjust the parameters batch_size, epochs and deep_epochs
 6. Have fun classifying your images!
